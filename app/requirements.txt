@@ -1,0 +1,6 @@
+flask
+pandas 
+datetime 
+numpy 
+sklearn
+matplotlib
