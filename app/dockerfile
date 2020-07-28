@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-# Use an official Python runtime as an image
-#FROM python:3.6.7
 
 # The EXPOSE instruction indicates the ports on which a container # # will listen for connections
 # Since Flask apps listen to port 5000  by default, we expose it
@@ -11,11 +9,10 @@ EXPOSE 5000
 # instruction creates a directory with this name if it doesn’t exist
 WORKDIR /app
 
-# Install any needed packages specified in requirements.txt
+# Install any needed packages specified
 RUN apt-get clean && \
         apt-get update && \
         apt-get install -y \
-        libmysqlclient-dev \
         python3-dev \
         build-essential \
         python3-pip
